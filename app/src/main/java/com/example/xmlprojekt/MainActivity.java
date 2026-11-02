@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -117,23 +118,20 @@ public class MainActivity extends AppCompatActivity {
             kostka.setGravity(Gravity.CENTER);
             kostka.setTextSize(16);
             kostka.setTextColor(Color.BLACK);
-            kostka.setPadding(16, 16, 16, 16);
+            kostka.setPadding(0, 0, 0, 0);
 
             GradientDrawable tloKostki = new GradientDrawable();
-            tloKostki.setColor(Color.WHITE);
-            tloKostki.setStroke(2, Color.DKGRAY);
-            tloKostki.setCornerRadius(12);
+            tloKostki.setColor(ContextCompat.getColor(this, R.color.dice_background));
+            tloKostki.setCornerRadius(2);
             kostka.setBackground(tloKostki);
 
             GridLayout.LayoutParams parametry = new GridLayout.LayoutParams();
-            int rozmiarKostki = (gridKostki.getWidth()
-                    - gridKostki.getPaddingLeft()
-                    - gridKostki.getPaddingRight()
-                    - 3 * 16) / 3;
-            parametry.width = 0;
+            int rozmiarKostki = (int) (48 * getResources().getDisplayMetrics().density);
+            parametry.width = rozmiarKostki;
             parametry.height = rozmiarKostki;
-            parametry.columnSpec = GridLayout.spec(i % 3, 1, 1f);
-            parametry.setMargins(8, 8, 8, 8);
+            parametry.columnSpec = GridLayout.spec(i % 5);
+            int odstep = (int) (3 * getResources().getDisplayMetrics().density);
+            parametry.setMargins(odstep, odstep, odstep, odstep);
 
             gridKostki.addView(kostka, parametry);
         }

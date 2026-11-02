@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="screen_background">#EEFBFA</color>
+    <color name="purple_button">#7464D8</color>
+    <color name="dice_background">#E7F6F3</color>
+    <color name="secondary_text">#596365</color>
 </resources>

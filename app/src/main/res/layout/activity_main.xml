@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/screen_background">
 
     <LinearLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:background="@color/screen_background"
         android:padding="24dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="26dp"
             android:text="Losowanie kostek"
-            android:textSize="28sp"
+            android:textColor="@color/secondary_text"
+            android:textSize="27sp"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Liczba kostek:"
+            android:textColor="@color/secondary_text"
             android:textSize="18sp" />
 
         <EditText
@@ -31,20 +35,27 @@
             android:layout_height="wrap_content"
             android:hint="Podaj liczbę kostek"
             android:inputType="number"
-            android:text="5" />
+            android:text="5"
+            android:textColor="@color/secondary_text"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/buttonLosuj"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="LOSUJ" />
+            android:backgroundTint="@color/purple_button"
+            android:minHeight="48dp"
+            android:text="LOSUJ"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="Wylosowane kostki:"
+            android:textColor="@color/secondary_text"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -54,15 +65,16 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:alignmentMode="alignMargins"
-            android:columnCount="3"
+            android:columnCount="5"
             android:gravity="center"
-            android:useDefaultMargins="true" />
+            android:useDefaultMargins="false" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="Wyniki:"
+            android:textColor="@color/secondary_text"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -73,6 +85,7 @@
             android:gravity="center"
             android:padding="10dp"
             android:text="Wyniki pojawią się tutaj"
+            android:textColor="@color/secondary_text"
             android:textSize="20sp" />
 
         <Button
@@ -80,14 +93,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="SORTUJ ROSNĄCO" />
+            android:backgroundTint="@color/purple_button"
+            android:minHeight="48dp"
+            android:text="SORTUJ ROSNĄCO"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
 
         <Button
             android:id="@+id/buttonMalejaco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="SORTUJ MALEJĄCO" />
+            android:backgroundTint="@color/purple_button"
+            android:minHeight="48dp"
+            android:text="SORTUJ MALEJĄCO"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
 
     </LinearLayout>
 </ScrollView>
