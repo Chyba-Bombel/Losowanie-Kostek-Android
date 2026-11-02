@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
             tekstWynikow.append(wynik);
 
             TextView kostka = new TextView(this);
-            kostka.setText(getString(R.string.die_result, i + 1, wynik));
+            kostka.setText(String.valueOf(wynik));
             kostka.setGravity(Gravity.CENTER);
             kostka.setTextSize(16);
             kostka.setTextColor(Color.BLACK);
@@ -126,8 +126,12 @@ public class MainActivity extends AppCompatActivity {
             kostka.setBackground(tloKostki);
 
             GridLayout.LayoutParams parametry = new GridLayout.LayoutParams();
+            int rozmiarKostki = (gridKostki.getWidth()
+                    - gridKostki.getPaddingLeft()
+                    - gridKostki.getPaddingRight()
+                    - 3 * 16) / 3;
             parametry.width = 0;
-            parametry.height = GridLayout.LayoutParams.WRAP_CONTENT;
+            parametry.height = rozmiarKostki;
             parametry.columnSpec = GridLayout.spec(i % 3, 1, 1f);
             parametry.setMargins(8, 8, 8, 8);
 
