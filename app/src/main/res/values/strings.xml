@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Xml projekt</string>
+    <string name="error_empty_dice_count">Podaj liczbę kostek.</string>
+    <string name="error_invalid_dice_count">Liczba kostek musi być dodatnią liczbą całkowitą.</string>
+    <string name="error_no_dice_to_sort">Najpierw wylosuj kostki.</string>
+    <string name="die_result">Kostka %1$d\nWynik: %2$d</string>
 </resources>
